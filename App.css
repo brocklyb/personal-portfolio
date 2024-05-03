@@ -1,0 +1,93 @@
+html{
+  background-color: grey;
+}
+
+#intro-container{
+  background-color:beige;
+  text-align: center;
+  align-content: center;
+  min-height: 30vh;
+  max-height: 80vh;
+  height: 75vh;
+}
+
+#navbar-links{
+  background-color: blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 5vh;
+}
+#navbar-links li{
+  padding-right: 100px;
+}
+
+#about-container{
+  margin-top: 5vh;
+  text-align: center;
+}
+
+#about-content-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.about-column{
+  background-color: green;
+  flex: 1;
+  height: 60vh;
+}
+
+#projects-container{
+  margin-top: 5vh;
+  text-align: center;
+}
+
+#project-one{
+  background-color: aqua;
+  height: 15vh;
+}
+
+#project-two{
+  background-color: orange;
+  height: 15vh;
+}
+
+#project-three{
+  background-color: aqua;
+  height: 15vh;
+}
+
+#project-four{
+  background-color: orange;
+  height: 15vh;
+}
+
+#contact-container{
+  margin-top: 5vh;
+  text-align: center;
+  justify-content: center;
+}
+
+input{
+  width: 30vh;
+}
+
+#contact-name, #contact-email{
+  min-height: 2.5vh;
+  height: 2.5vh;
+}
+
+#contact-message{
+  min-height: 13vh;
+  height: 13vh;
+}
+
+#footer-container{
+  margin-top: 5vh;
+  background-color: beige;
+  text-align: center;
+
+}
