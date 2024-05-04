@@ -1,0 +1,137 @@
+#footer_container{
+    background-color: rgb(43, 136, 167);
+    padding-top: 3%;
+  
+}
+
+#footer_container_grid{
+    display: grid;
+    grid-template-columns: 3;
+    grid-row: 1;
+    text-align: center;
+    height: 400px;
+}
+
+#section1-container{
+    display: grid;
+    grid-row: 1;
+    grid-column: 1;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#section2-container{
+    display: grid;
+    grid-row: 1;
+    grid-column: 2;
+    
+}
+
+#section3-container{
+    display: grid;
+    grid-row: 1;
+    grid-column: 3;
+}
+
+#links-container{
+    display: inline;
+}
+
+.social-icon{
+    width: 100px;
+}
+
+#contact-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 200px;
+}
+
+
+#left-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 60%;
+}
+
+#left-column img{
+    width: 85px;
+    height: 90px;
+}
+
+#right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 100%;
+}
+
+.grid-icon {
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.footer-link{
+    font-weight: bolder;
+    font-size:xx-large;
+    text-decoration: none;
+
+}
+
+.company-logo{
+    width: 160px;
+}
+
+#footer_container{
+    min-height: 500px;
+}
+
+.footer-link-donate{
+    font-weight: bold;
+    background-color: #d44e25; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    min-height: 50px;
+    min-width: 50px;
+}
+
+.footer-link-donate:hover {
+    background-color: #0056b3; 
+  }
+
+.donation-popup-button{
+    font-weight: bold;
+    background-color: #d44e25; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 10px 10px 10px;
+    min-height: 40px;
+  }
+
+.donation-popup-button:hover {
+    background-color: #0056b3; 
+}
+
+.submit-donation{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    background-color: #d44e25; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-donation:hover {
+    background-color: #0056b3; 
+}

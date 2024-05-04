@@ -1,0 +1,66 @@
+#contact-header {
+display: flex; 
+flex-direction: column; 
+justify-content: center;
+align-items: center;
+align-content: center;
+text-align: center;
+padding: 20px; 
+}
+
+#contact-form {
+display: flex;
+justify-content: center;
+padding-bottom: 10%;
+padding-top: 3%;
+}
+
+#circle-background {
+border-radius: 50%;
+background-color: #4e9cff; 
+padding: 20px; 
+width: 600px;
+}
+
+#contact-form-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#contact-form-content input {
+margin: 10px 0; 
+padding: 8px; 
+}
+
+#user-message{
+height: 200px;
+}
+
+#contact-content-container{
+padding-top: 5%;
+}
+
+#customer-service{
+height: 240px
+}
+
+.input-fields{
+    text-align: center;
+}
+
+#submit-button {
+    font-weight: bold;
+    background-color: #d44e25; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+  
+  #submit-button:hover {
+    background-color: #0056b3; 
+  }
