@@ -1,0 +1,124 @@
+#main-snake-container{
+    margin-left: 20%;
+    max-width: 30%;
+    }
+
+#grid-container{
+    display: grid;
+    grid-template-columns: 10;
+}
+
+.cell{
+    height: 80px;
+    min-width: 90px;
+    max-width: 90px;
+
+}
+
+#column1,#column2,#column3,#column4,#column5,#column6,#column7,#column8,#column9,#column10{
+    text-align: center;
+}
+
+#column1{
+    display: grid;
+    grid-column: 1;
+}
+
+#column2{
+    display: grid;
+    grid-column: 2;
+}
+
+#column3{
+    display: grid;
+    grid-column: 3;
+}
+
+#column4{
+    display: grid;
+    grid-column: 4;
+}
+
+#column5{
+    display: grid;
+    grid-column: 5;
+}
+
+#column6{
+    display: grid;
+    grid-column: 6;
+}
+
+#column7{
+    display: grid;
+    grid-column: 7;
+}
+
+#column8{
+    display: grid;
+    grid-column: 8;
+}
+
+#column9{
+    display: grid;
+    grid-column: 9;
+}
+
+#column10{
+    display: grid;
+    grid-column: 10;
+}
+
+#highscores-grid{
+    text-align: center;
+    display: grid;
+    grid-template-columns: 2;
+    width: 900px;
+    max-width: 900px;
+    border: 2px solid black;
+}
+
+#recentScoresContainer{
+    display: grid;
+    grid-column: 1;
+    overflow: hidden;
+}
+
+#recentScoresData{
+    justify-content: center;
+    display: flex;
+  
+}
+
+#topFiveContainer{
+    display: grid;
+    grid-column: 2;
+}
+
+#topFive{
+    justify-content: center;
+    display: flex;
+  
+}
+
+#topFiveScoresName{
+    margin-right: 20px;
+}
+
+#topFiveScoresScore{
+    margin-right: 20px;
+}
+
+#scoreDataName{
+    margin-right: 20px;
+}
+
+#scoreDataScore{
+    margin-right: 20px;
+}
+
+#popup-container-highscores{
+    overflow:scroll;
+    max-height: 400px;
+}
+
