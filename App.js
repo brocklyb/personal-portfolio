@@ -1,76 +1,89 @@
-import './styles/App.css';
+import React, { Component } from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from "react-router-dom";
 
-function App() {
-  return (
-    <div id='main-container'>
-      <div id='intro-container'>
-        <h1>Hello, I'm <i>Brock.</i></h1>
-        <h1>I am a <i>web developer.</i></h1>
-        <button>View my work</button>
-      </div>
+import Home from './components/Home'
+import SnakeGameHome from './components/SnakeGame/HomePage'
+import SnakeGamePlay from './components/SnakeGame/GamePage'
+import SnakeHighscores from './components/SnakeGame/Highscore'
 
-      <div id='navbar-container'>
-        <ul id='navbar-links'>
-          <li id='navbar-home'>Home</li>
-          <li id='navbar-about'>About</li>
-          <li id='navbar-projects'>Projects</li>
-          <li id='navbar-contact'>Contact</li>
-        </ul>
-      </div>
+import NonProfitHome from './components/NonProfit/Home'
+import NonProfitProjects from './components/NonProfit/CurrentProjects'
+import NonProfitAbout from './components/NonProfit/AboutUs'
+import NonProfitContact from './components/NonProfit/Contact'
+import NonProfitProjectInformation from './components/NonProfit/projectInformation'
 
-      <div id='about-container'>
-        <h1>About</h1>
-        <div id='about-content-container'>
-          <div className='about-column'>
-            <div id='about-left'><p>LEFT content</p></div>
-          </div>
-          
-          <div className='about-column'>
-            <div id='about-right'><p>Right content</p></div>
-          </div>
-        </div>
-      </div>
+import GameContextProvider from "./components/SnakeGame/contexts/UserContextProvider";
+import ScoresContextProvider from "./components/SnakeGame/contexts/HighScoresProvider";
 
-      <div id='projects-container'>
-        <h1>Projects</h1>
-        <div id='project-one'>
-          <h3>Project 1</h3>
-        </div>
 
-        <div id='project-two'>
-          <h3>Project 2</h3>
-        </div>
+class App extends Component {
 
-        <div id='project-three'>
-          <h3>Project 3</h3>
-        </div>
+  render() {
+      return (
+        <GameContextProvider>
+          <ScoresContextProvider>
+              <Router>
+                <div className="App">
+                    <ul className="App-header">
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                    </ul>
+                    <Routes>
+                        <Route
+                            path="/"
+                            element={<Home />}
+                        ></Route>
+                        <Route
+                            path="/snake/home"
+                            element={<SnakeGameHome />}
+                        ></Route>
+                        <Route
+                            path="/snake/playsnake"
+                            element={<SnakeGamePlay />}
+                        ></Route>
+                        <Route
+                            path="/snake/highscores"
+                            element={<SnakeHighscores />}
+                        ></Route>
+                        <Route
+                            path="/nonprofit/home"
+                            element={<NonProfitHome />}
+                        ></Route>
+                        <Route
+                            path="/nonprofit/about"
+                            element={<NonProfitAbout />}
+                        ></Route>
+                        <Route
+                            path="/nonprofit/contact"
+                            element={<NonProfitContact />}
+                        ></Route>
+                        <Route
+                            path="/nonprofit/currentprojects"
+                            element={<NonProfitProjects />}
+                        ></Route>
+                        <Route
+                            path="/nonprofit/projectInformation/:id"
+                            element={<NonProfitProjectInformation />}
+                        ></Route>
+                      
 
-        <div id='project-four'>
-          <h3>Project 4</h3>
-        </div>
-      </div>
 
-      <div id='contact-container'>
-        <h1>Contact</h1>
-        <p>Have a question or want to work together?<br></br>
-            Leave your details and I'll get back to you as soon as possible.</p>
-        <input id='contact-name' placeholder='Name'></input>
-        <br></br>
-        <input id='contact-email' placeholder='Email'></input>
-        <br></br>
-        <input id='contact-message' placeholder='Message'></input>
-        <br></br>
-        <button>Submit</button>
-      </div>
-
-      <div id='footer-container'>
-          <button>Top of page</button>
-          <h2>LinkedIn</h2>
-          <h2>GitHub</h2>
-      </div>
-
-    </div>
-  );
+                      
+                    </Routes>
+                </div>
+              </Router>
+          </ScoresContextProvider>
+        </GameContextProvider>
+      );
+  }
 }
 
 export default App;
+
+
