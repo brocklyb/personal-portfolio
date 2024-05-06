@@ -1,93 +1,148 @@
-  #main-project-container{
-    background-color: grey;
-  }
+#main-project-container{
+  background-color: grey;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #fcfc60);
+  background-size: 300%;
+  background-position: left;
+  animation: bg-animation 35s infinite alternate;
+  position: relative;
+}
 
-  #intro-container{
-    background-color:beige;
-    text-align: center;
-    align-content: center;
-    min-height: 30vh;
-    max-height: 80vh;
-    height: 75vh;
-  }
-  
-  #navbar-links{
-    background-color: blue;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    height: 5vh;
-  }
-  #navbar-links li{
-    padding-right: 100px;
-  }
-  
-  #about-container{
-    margin-top: 5vh;
-    text-align: center;
-  }
-  
-  #about-content-container{
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .about-column{
-    background-color: green;
-    flex: 1;
-    height: 60vh;
-  }
-  
-  #projects-container{
-    margin-top: 5vh;
-    text-align: center;
-  }
-  
-  #project-one{
-    background-color: aqua;
-    height: 15vh;
-  }
-  
-  #project-two{
-    background-color: orange;
-    height: 15vh;
-  }
-  
-  #project-three{
-    background-color: aqua;
-    height: 15vh;
-  }
-  
-  #project-four{
-    background-color: orange;
-    height: 15vh;
-  }
-  
-  #contact-container{
-    margin-top: 5vh;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  input{
-    width: 30vh;
-  }
-  
-  #contact-name, #contact-email{
-    min-height: 2.5vh;
-    height: 2.5vh;
-  }
-  
-  #contact-message{
-    min-height: 13vh;
-    height: 13vh;
-  }
-  
-  #footer-container{
-    margin-top: 5vh;
-    background-color: beige;
-    text-align: center;
-  
-  }
+@keyframes bg-animation {
+  0% {background-position: left}
+  100% {background-position: right;}
+}
+
+@keyframes bgg-animation {
+  0% {background-position: right}
+  100% {background-position: left;}
+}
+
+.intro-text{
+  font-size: 4vw;
+}
+
+#intro-container{
+  text-align: center;
+  align-content: center;
+  min-height: 30vh;
+  max-height: 80vh;
+  height: 75vh;
+}
+
+.sticky{
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#navbar-container{
+  font-size: 2vw;
+  width: 100%;
+  align-items: center;
+}
+
+#navbar-links{
+  background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+  background-size: 300%;
+  background-position: right;
+  animation: bgg-animation 35s infinite alternate;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  height: 5vh;
+}
+
+#navbar-links li{
+  padding-right: 100px;
+}
+
+#about-container{
+  margin-top: 5vh;
+  text-align: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+#about-content-container{
+  display: flex;
+  flex-direction: row;
+  height: 60vh;
+}
+
+.about-column{
+  flex: 1;
+}
+
+#about-left{
+  display: flex;
+  flex-direction: column;
+}
+
+#profile-pic{
+  height: 400px;
+  width: 400px;
+  background-color: blue;
+}
+
+#profile-bio{
+  max-width: 40vh;
+  max-height: 40vh;
+}
+
+#projects-container{
+  margin-top: 5vh;
+  text-align: center;
+}
+
+#project-one{
+  background-color: aqua;
+  height: 15vh;
+}
+
+#project-two{
+  background-color: orange;
+  height: 15vh;
+}
+
+#project-three{
+  background-color: aqua;
+  height: 15vh;
+}
+
+#project-four{
+  background-color: orange;
+  height: 15vh;
+}
+
+#contact-container{
+  margin-top: 5vh;
+  text-align: center;
+  justify-content: center;
+}
+
+input{
+  width: 30vh;
+}
+
+#contact-name, #contact-email{
+  min-height: 2.5vh;
+  height: 2.5vh;
+}
+
+#contact-message{
+  min-height: 13vh;
+  height: 13vh;
+}
+
+#footer-container{
+  margin-top: 5vh;
+  background-color: beige;
+  text-align: center;
+}
+
