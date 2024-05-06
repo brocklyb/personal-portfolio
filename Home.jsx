@@ -1,21 +1,58 @@
 import './Styles/ProjectHome.css'
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Home() {
+  useEffect(() => {
+  // When the user scrolls the page, execute myFunction
+  window.onscroll = function() {myFunction()};
+
+  // Get the header
+  var header = document.getElementById("navbar-container");
+
+  // Get the offset position of the navbar
+  var sticky = header.offsetTop;
+
+  // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+  function myFunction() {
+    if (window.pageYOffset > sticky) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  } 
+  },[])
+
+  const handleScrollToTop = () =>{
+    window.scrollTo({top: 0, behavior: 'smooth'})
+  }
+
+  const handleScrollToProjects = () =>{
+    window.scrollTo({top: 1600, behavior: 'smooth'})
+  }
+
+  const handleScrollToAbout = () =>{
+    window.scrollTo({top: 700, behavior: 'smooth'})
+  }
+
+  const handleScrollToBottom = () =>{
+    window.scrollTo({top: 5000, behavior: 'smooth'})
+  }
+
     return (
       <div id='main-project-container'>
         <div id='intro-container'>
-          <h1>Hello, I'm <i>Brock.</i></h1>
-          <h1>I am a <i>web developer.</i></h1>
-          <button>View my work</button>
+          <h1 className='intro-text'>Hello, I'm <i>Brock.</i></h1>
+          <h1 className='intro-text'>I am a <i>web developer.</i></h1>
+          <button id='viewMyWork' onClick={handleScrollToProjects}>View my work</button>
         </div>
   
         <div id='navbar-container'>
           <ul id='navbar-links'>
-            <li id='navbar-home'>Home</li>
-            <li id='navbar-about'>About</li>
-            <li id='navbar-projects'>Projects</li>
-            <li id='navbar-contact'>Contact</li>
+            <li onClick={handleScrollToTop} id='navbar-home'>Home</li>
+            <li onClick={handleScrollToAbout} id='navbar-about'>About</li>
+            <li onClick={handleScrollToProjects} id='navbar-projects'>Projects</li>
+            <li onClick={handleScrollToBottom} id='navbar-contact'>Contact</li>
           </ul>
         </div>
   
@@ -23,7 +60,18 @@ function Home() {
             <h1>About</h1>
           <div id='about-content-container'>
             <div className='about-column'>
-              <div id='about-left'><p>LEFT content</p></div>
+              <div id='about-left'>
+                <div id='profile-pic'>PFP</div>
+                <p id='profile-bio'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, qus nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                    consectetur adipiscng eli
+                    Sed do eiusmod tempor incidunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
             </div>
             
             <div className='about-column'>
@@ -71,7 +119,7 @@ function Home() {
         </div>
   
         <div id='footer-container'>
-            <button>Top of page</button>
+            <button onClick={handleScrollToTop}>Top of page</button>
             <h2>LinkedIn</h2>
             <h2>GitHub</h2>
         </div>
@@ -81,3 +129,4 @@ function Home() {
   }
   
   export default Home;
+
