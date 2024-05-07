@@ -60,6 +60,11 @@
 
 #navbar-links li{
   padding-right: 100px;
+  color: black;
+}
+
+#navbar-links li:hover{
+  color: white;
 }
 
 #about-container{
@@ -138,6 +143,10 @@ input{
 #contact-message{
   min-height: 13vh;
   height: 13vh;
+}
+
+.contact-me-input{
+  text-align: center;
 }
 
 #footer-container{
