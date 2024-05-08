@@ -1,5 +1,6 @@
 :root{
   --Background-color: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #fcfc60);
+  --Background-color-reverse: linear-gradient(45deg, #fcfc60, #ffc75f, #ff9671, #ff6f91, #d65db1, #845ec2);
   --Foreground-color: blue;
   --primary-text-color: black;
   --secondary-text-color: white;
@@ -14,14 +15,6 @@
   color: var(--primary-text-color);
 }
 
-#text{
-
-}
-
-#box{
-
-}
-
 
 [data-theme="dark"]{
   --Background-color: black;
@@ -31,26 +24,6 @@
   --toggle-bg: rgb(21, 40, 150);
   --toggle-fg: rgb(0, 153, 255);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #main-project-container{
@@ -70,7 +43,7 @@
   100% {background-position: right;}
 }
 
-@keyframes bgg-animation {
+@keyframes bg-animation-reverse {
   0% {background-position: right}
   100% {background-position: left;}
 }
@@ -82,9 +55,9 @@
 #intro-container{
   text-align: center;
   align-content: center;
-  min-height: 30vh;
+  min-height: 10vh;
   max-height: 80vh;
-  height: 75vh;
+  height: 50vh;
 }
 
 .sticky{
@@ -102,17 +75,16 @@
 }
 
 #navbar-links{
-  background-image: linear-gradient(45deg, #845ec2, #d65db1, #ff6f91, #ff9671, #ffc75f, #f9f871);
+  background-image: var(--Background-color-reverse);
   background-size: 300%;
   background-position: right;
-  animation: bgg-animation 35s infinite alternate;
-
+  animation: bg-animation-reverse 3s infinite alternate;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   list-style-type: none;
-  height: 5vh;
+  height: 6vh;
   z-index: 99999;
 }
 
@@ -154,6 +126,7 @@
   position: relative;
   width: 40vw; /* Adjust as needed */
   height: 50vw; /* Adjust as needed */
+  padding-right: 5vw;
 }
 
 .about-right-image-container img {
@@ -164,14 +137,19 @@
   left: 50%; /* Position at the center horizontally */
   transform: translate(-50%, -50%); /* Center the images */
   border-radius: 50%; /* Make the images circular */
-
   max-width: 200px;
   max-height: 200px;
+}
+
+#about-left{
+  padding-left: 5vw;
 }
 
 
 .about-right-image-container img:nth-child(1) {
   transform: translate(-50%, -50%) rotate(0deg) translate(18vw) rotate(0deg);
+  min-height: 100px;
+  min-width: 100px;
 }
 .about-right-image-container img:nth-child(2) {
   transform: translate(-50%, -50%) rotate(45deg) translate(18vw) rotate(-45deg);
@@ -222,9 +200,13 @@
   text-align: center;
 }
 
-#project-one{
-  background-color: aqua;
-  height: 15vh;
+
+
+#prj-one-underline{
+  height: 50px;
+  width: 55vw;
+  background-color: green;
+  max-width: 55vw;
 }
 
 #project-two{
