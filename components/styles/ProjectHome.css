@@ -60,6 +60,8 @@
   height: 50vh;
 }
 
+
+
 .sticky{
   position: fixed;
   top: 0;
@@ -127,6 +129,7 @@
   width: 40vw; /* Adjust as needed */
   height: 50vw; /* Adjust as needed */
   padding-right: 5vw;
+
 }
 
 .about-right-image-container img {
@@ -147,29 +150,103 @@
 
 
 .about-right-image-container img:nth-child(1) {
+  /* Initial position */
   transform: translate(-50%, -50%) rotate(0deg) translate(18vw) rotate(0deg);
-  min-height: 100px;
-  min-width: 100px;
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
 }
+.about-right-image-container img:nth-child(1):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
+}
+
+
 .about-right-image-container img:nth-child(2) {
   transform: translate(-50%, -50%) rotate(45deg) translate(18vw) rotate(-45deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
+}
+.about-right-image-container img:nth-child(2):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
 }
 .about-right-image-container img:nth-child(3) {
   transform: translate(-50%, -50%) rotate(90deg) translate(18vw) rotate(-90deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
 }
-.about-right-image-container img:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(135deg) translate(18vw) rotate(-135deg);
-}
-.about-right-image-container img:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(180deg) translate(18vw) rotate(-180deg);
-}
-.about-right-image-container img:nth-child(6) {
-  transform: translate(-50%, -50%) rotate(225deg) translate(18vw) rotate(-225deg);
-}
-.about-right-image-container img:nth-child(7) {
-  transform: translate(-50%, -50%) rotate(270deg) translate(18vw) rotate(-270deg);
+.about-right-image-container img:nth-child(3):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
 }
 
+.about-right-image-container img:nth-child(4) {
+  transform: translate(-50%, -50%) rotate(135deg) translate(18vw) rotate(-135deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
+}
+.about-right-image-container img:nth-child(4):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
+}
+
+.about-right-image-container img:nth-child(5) {
+  transform: translate(-50%, -50%) rotate(180deg) translate(18vw) rotate(-180deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
+}
+.about-right-image-container img:nth-child(5):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
+}
+
+.about-right-image-container img:nth-child(6) {
+  transform: translate(-50%, -50%) rotate(225deg) translate(18vw) rotate(-225deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
+}
+.about-right-image-container img:nth-child(6):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
+}
+
+.about-right-image-container img:nth-child(7) {
+  transform: translate(-50%, -50%) rotate(270deg) translate(18vw) rotate(-270deg);
+  /* Assuming the initial position is translated 18vw from the center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Adjust other properties as needed */
+  transition: transform 0.5s ease; /* Smooth transition over 0.5 seconds */
+}
+.about-right-image-container img:nth-child(7):hover {
+  /* Translated position on hover */
+  transform: translate(-50%, -50%);
+}
 
 
 
